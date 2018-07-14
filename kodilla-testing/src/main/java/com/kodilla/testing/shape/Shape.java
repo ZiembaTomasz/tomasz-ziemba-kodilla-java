@@ -2,14 +2,8 @@ package com.kodilla.testing.shape;
 
 interface Shape
 {
-    public String getShapeName(String name)
-    {
-        return name;
+    String getShapeName();
 
-    }
-    public int getField(int field)
-    {
-        return field;
 
-    }
+    int getField();
 }

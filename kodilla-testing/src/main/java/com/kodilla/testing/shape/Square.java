@@ -1,15 +1,22 @@
 package com.kodilla.testing.shape;
 
-public class Square implements Shape
+public  class Square implements Shape
 {
-    String name;
-    int n;
-    public getShapeName()
+    private String name;
+    private int field;
+
+    public Square(String name, int field) {
+        this.name = name;
+        this.field = field;
+    }
+
+    public String getShapeName()
     {
         return name;
     }
-    public int getField(int n)
+    public int getField()
     {
-        return n;
+        return field;
     }
+
 }
