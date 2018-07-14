@@ -9,8 +9,6 @@ public class Triangle implements Shape
         this.name = name;
         this.field = field;
     }
-
-
     public String getShapeName()
     {
         return name;
@@ -19,7 +17,6 @@ public class Triangle implements Shape
     {
         return field;
     }
-
 }
 
 

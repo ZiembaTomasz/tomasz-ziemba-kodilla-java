@@ -9,7 +9,6 @@ public  class Square implements Shape
         this.name = name;
         this.field = field;
     }
-
     public String getShapeName()
     {
         return name;
@@ -18,5 +17,4 @@ public  class Square implements Shape
     {
         return field;
     }
-
 }

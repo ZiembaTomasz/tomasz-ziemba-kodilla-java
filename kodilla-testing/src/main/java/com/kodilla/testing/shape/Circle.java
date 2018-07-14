@@ -10,8 +10,6 @@ public class Circle implements Shape
         this.name = name;
         this.field = field;
     }
-
-
     public String getShapeName()
     {
         return name;
@@ -20,5 +18,4 @@ public class Circle implements Shape
     {
         return field;
     }
-
 }
