@@ -38,6 +38,5 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(circle);
         ArrayList<Shape> shapes = shapeCollector.showFigures();
         Assert.assertEquals(1, shapeCollector.showFigures().size());
-
     }
 }
