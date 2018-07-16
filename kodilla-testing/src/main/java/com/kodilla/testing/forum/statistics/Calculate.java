@@ -2,15 +2,14 @@ package com.kodilla.testing.forum.statistics;
 
 public class Calculate {
     Statistics statistics;
-    int usersCount;
-    int postsCount;
-    int commentsCount;
-    double averagePostsPerUsers;
-    double averageCommentsPerUser;
-    double averageCommentsPerPosts;
+   private int usersCount;
+   private int postsCount;
+   private int commentsCount;
+   private double averagePostsPerUsers;
+   private double averageCommentsPerUser;
+   private double averageCommentsPerPosts;
 
-    public void calculateAdvStatistic(Statistics statistics)
-    {
+    public void calculateAdvStatistic(Statistics statistics) {
         usersCount = statistics.usersNames().size();
         postsCount = statistics.postsCount();
         commentsCount = statistics.commentsCount();
@@ -18,8 +17,33 @@ public class Calculate {
         averageCommentsPerUser= (double)statistics.commentsCount()  / statistics.usersNames().size();
         averageCommentsPerPosts =  (double)statistics.commentsCount() / statistics.postsCount();
     }
-    public void showStatistic()
-    {
+
+    public int getUsersCount() {
+        return usersCount;
+    }
+
+    public int getPostsCount() {
+        return postsCount;
+    }
+
+    public int getCommentsCount() {
+
+        return commentsCount;
+    }
+
+    public double getAveragePostsPerUsers() {
+        return averagePostsPerUsers;
+    }
+
+    public double getAverageCommentsPerUser() {
+        return averageCommentsPerUser;
+    }
+
+    public double getAverageCommentsPerPosts() {
+        return averageCommentsPerPosts;
+    }
+
+    public void showStatistic() {
         System.out.println("Number of Users = " + usersCount);
         System.out.println("Number of posts = " + postsCount);
         System.out.println("Numbers of comments = " + commentsCount);
