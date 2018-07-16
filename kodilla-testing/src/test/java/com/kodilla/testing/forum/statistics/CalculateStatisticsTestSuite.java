@@ -39,15 +39,15 @@ public class CalculateStatisticsTestSuite {
         ArrayList<String> users = new ArrayList<>();
         users.add("Jacek");
         users.add("Michal");
-        int postCount = 100;
-        int commentsCount = 0;
+        int postCount = 0;
+        int commentsCount = 100;
         when(statisticsMock.postsCount()).thenReturn(postCount);
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
 
-        Assert.assertEquals(0, calculate.averagePostsPerUsers);
+        Assert.assertEquals(0, calculate.averagePostsPerUsers, 0.1);
 
     }
 }
