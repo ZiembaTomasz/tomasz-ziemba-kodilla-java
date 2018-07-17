@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.HashMap;
 
+import static javafx.beans.binding.Bindings.when;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
