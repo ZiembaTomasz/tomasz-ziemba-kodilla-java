@@ -1,7 +1,7 @@
 package com.kodilla.testing.forum.statistics;
 
 public class Calculate {
-    Statistics statistics;
+
    private int usersCount;
    private int postsCount;
    private int commentsCount;
@@ -13,9 +13,32 @@ public class Calculate {
         usersCount = statistics.usersNames().size();
         postsCount = statistics.postsCount();
         commentsCount = statistics.commentsCount();
-        averagePostsPerUsers = (double)statistics.postsCount() / statistics.usersNames().size();
-        averageCommentsPerUser= (double)statistics.commentsCount()  / statistics.usersNames().size();
-        averageCommentsPerPosts =  (double)statistics.commentsCount() / statistics.postsCount();
+        if(statistics.postsCount() == 0 && statistics.usersNames().size() == 0){
+            averagePostsPerUsers = ((double)statistics.postsCount() + 10) / (statistics.usersNames().size() +10);
+        }
+        else if(statistics.postsCount() == 0){
+            averagePostsPerUsers = ((double)statistics.postsCount() + 10) / statistics.usersNames().size();
+        }
+        else if(statistics.usersNames().size() ==0 ){
+            averagePostsPerUsers = (double)statistics.postsCount() / (statistics.usersNames().size() +10);
+        }
+
+        else {
+            averagePostsPerUsers = (double)statistics.postsCount() / statistics.usersNames().size();
+        }
+        if(statistics.usersNames().size() == 0){
+            averageCommentsPerUser= (double)statistics.commentsCount()  / (statistics.usersNames().size()+ 10);
+        }
+        else{
+            averageCommentsPerUser= (double)statistics.commentsCount()  / statistics.usersNames().size();
+        }
+
+        if(statistics.postsCount() == 0){
+            averageCommentsPerPosts =  (double)statistics.commentsCount()  / (statistics.postsCount()+ 10);
+        }
+        else {
+            averageCommentsPerPosts =  (double)statistics.commentsCount() / statistics.postsCount();
+        }
     }
 
     public int getUsersCount() {

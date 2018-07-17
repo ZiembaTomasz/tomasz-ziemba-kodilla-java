@@ -40,16 +40,16 @@ public class CalculateStatisticsTestSuite {
         users.add("Jacek");
         users.add("Michal");
         int postCount = 0;
-        int commentsCount = 0;
+        int commentsCount = 10;
         when(statisticsMock.postsCount()).thenReturn(postCount);
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
 
-        Assert.assertEquals(0, calculate.getAveragePostsPerUsers(), 0.1);
-        Assert.assertEquals(0, calculate.getAverageCommentsPerUser(), 0.1);
-        Assert.assertEquals(0, calculate.getAverageCommentsPerPosts(), 0.1);
+        Assert.assertEquals(5, calculate.getAveragePostsPerUsers(), 0.1);
+        Assert.assertEquals(5, calculate.getAverageCommentsPerUser(), 0.1);
+        Assert.assertEquals(1, calculate.getAverageCommentsPerPosts(), 0.1);
     }
     @Test
     public void test0CommentsWithMock(){
@@ -82,6 +82,7 @@ public class CalculateStatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(commentsCount);
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
+
         Assert.assertEquals(50, calculate.getAveragePostsPerUsers(), 0.1);
         Assert.assertEquals(5, calculate.getAverageCommentsPerUser(), 0.1);
         Assert.assertEquals(0.1, calculate.getAverageCommentsPerPosts(),0.1);
@@ -117,9 +118,9 @@ public class CalculateStatisticsTestSuite {
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
 
-        Assert.assertEquals(0, calculate.getAveragePostsPerUsers(), 0.1);
-        Assert.assertEquals(0, calculate.getAverageCommentsPerUser(), 0.1);
-        Assert.assertEquals(10, calculate.getAverageCommentsPerPosts(), 0.1);git
+        Assert.assertEquals(10, calculate.getAveragePostsPerUsers(), 0.1);
+        Assert.assertEquals(100, calculate.getAverageCommentsPerUser(), 0.1);
+        Assert.assertEquals(10, calculate.getAverageCommentsPerPosts(), 0.1);
     }
 }
 
