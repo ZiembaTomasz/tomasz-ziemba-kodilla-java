@@ -47,9 +47,9 @@ public class CalculateStatisticsTestSuite {
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
 
-        Assert.assertEquals(5, calculate.getAveragePostsPerUsers(), 0.1);
+        Assert.assertEquals(0, calculate.getAveragePostsPerUsers(), 0.1);
         Assert.assertEquals(5, calculate.getAverageCommentsPerUser(), 0.1);
-        Assert.assertEquals(1, calculate.getAverageCommentsPerPosts(), 0.1);
+        Assert.assertEquals(0, calculate.getAverageCommentsPerPosts(), 0.1);
     }
     @Test
     public void test0CommentsWithMock(){
@@ -118,8 +118,8 @@ public class CalculateStatisticsTestSuite {
         Calculate calculate = new Calculate();
         calculate.calculateAdvStatistic(statisticsMock);
 
-        Assert.assertEquals(10, calculate.getAveragePostsPerUsers(), 0.1);
-        Assert.assertEquals(100, calculate.getAverageCommentsPerUser(), 0.1);
+        Assert.assertEquals(0, calculate.getAveragePostsPerUsers(), 0.1);
+        Assert.assertEquals(0, calculate.getAverageCommentsPerUser(), 0.1);
         Assert.assertEquals(10, calculate.getAverageCommentsPerPosts(), 0.1);
     }
 }

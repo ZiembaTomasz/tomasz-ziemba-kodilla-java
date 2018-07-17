@@ -14,27 +14,27 @@ public class Calculate {
         postsCount = statistics.postsCount();
         commentsCount = statistics.commentsCount();
         if(statistics.postsCount() == 0 && statistics.usersNames().size() == 0){
-            averagePostsPerUsers = ((double)statistics.postsCount() + 10) / (statistics.usersNames().size() +10);
+            averagePostsPerUsers = 0;
         }
         else if(statistics.postsCount() == 0){
-            averagePostsPerUsers = ((double)statistics.postsCount() + 10) / statistics.usersNames().size();
+            averagePostsPerUsers = 0;
         }
         else if(statistics.usersNames().size() ==0 ){
-            averagePostsPerUsers = (double)statistics.postsCount() / (statistics.usersNames().size() +10);
+            averagePostsPerUsers = 0;
         }
 
         else {
             averagePostsPerUsers = (double)statistics.postsCount() / statistics.usersNames().size();
         }
         if(statistics.usersNames().size() == 0){
-            averageCommentsPerUser= (double)statistics.commentsCount()  / (statistics.usersNames().size()+ 10);
+            averageCommentsPerUser = 0;
         }
         else{
             averageCommentsPerUser= (double)statistics.commentsCount()  / statistics.usersNames().size();
         }
 
         if(statistics.postsCount() == 0){
-            averageCommentsPerPosts =  (double)statistics.commentsCount()  / (statistics.postsCount()+ 10);
+            averageCommentsPerPosts =  0;
         }
         else {
             averageCommentsPerPosts =  (double)statistics.commentsCount() / statistics.postsCount();
