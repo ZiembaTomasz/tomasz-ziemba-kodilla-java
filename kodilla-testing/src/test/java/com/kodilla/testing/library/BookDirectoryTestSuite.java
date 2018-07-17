@@ -6,15 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class BookDirectoryTestSuite {
 
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<Book>();
-        for(int n = 1; n <= booksQuantity; n++){
+        for (int n = 1; n <= booksQuantity; n++) {
             Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
             resultList.add(theBook);
         }
@@ -43,7 +46,6 @@ public class BookDirectoryTestSuite {
 
         // Then
         assertEquals(4, theListOfBooks.size());
-        assertTrue(false);
     }
 
     @Test
@@ -87,5 +89,28 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
+    }
+
+    @Test
+    public void testListBooksBorrowedByUserConditionWhenNoBorrowed() {
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary booklibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> emptyBooksList = new ArrayList<>();
+        List<Book> bookBorrowed = generateListOfNBooks(1);
+        List<Book> books5Borrowed = generateListOfNBooks(5);
+        LibraryUser libraryUserMock1 = mock(LibraryUser.class);
+        LibraryUser libraryUserMock2 = mock(LibraryUser.class);
+        LibraryUser libraryUserMock3 = mock(LibraryUser.class);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock1)).thenReturn(emptyBooksList);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock2)).thenReturn(bookBorrowed);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock3)).thenReturn(books5Borrowed);
+
+        List<Book> usersBook1 = booklibrary.listBooksInHandsOf(libraryUserMock1);
+        List<Book> usersBook2 = booklibrary.listBooksInHandsOf(libraryUserMock2);
+        List<Book> usersBook3 = booklibrary.listBooksInHandsOf(libraryUserMock3);
+
+        assertEquals(0, usersBook1.size());
+        assertEquals(1, usersBook2.size());
+        assertEquals(5, usersBook3.size());
     }
 }

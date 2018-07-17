@@ -16,6 +16,9 @@ public class BookLibrary {
         if (resultList.size() > 20) return bookList;
         bookList = resultList;
         return bookList;
-
+    }
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
+        List<Book> userList = libraryDatabase.listBooksInHandsOf(libraryUser);
+        return userList;
     }
 }
