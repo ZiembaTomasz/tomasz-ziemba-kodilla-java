@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.task;
 
 public class ExtraFoodShop implements Service {
 
-    public void process(String provider, int amount, String kind){
-        System.out.println("We are " + provider + " and we are ready for selling " + amount + " of " + kind);
+    public void process(){
+        System.out.println("We are Extra Food shoop and we want to sell 30 bags of rice");
     }
 }

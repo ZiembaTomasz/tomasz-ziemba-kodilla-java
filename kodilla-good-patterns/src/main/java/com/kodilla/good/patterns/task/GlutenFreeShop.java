@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.task;
 
 public class GlutenFreeShop implements Service{
 
-    public void process(String provider, int amount, String kind){
-        System.out.println("Our shop " + provider + " have " + amount + kind);
+    public void process(){
+        System.out.println("Our Gluten Free Shop need to sell 10 kilograms of himalyan salt!!");
     }
 }
