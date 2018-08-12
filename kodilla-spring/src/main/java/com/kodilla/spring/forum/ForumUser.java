@@ -1,7 +1,7 @@
 package com.kodilla.spring.forum;
 import org.springframework.stereotype.Component;
-@Component
 
+@Component
 public class ForumUser {
     String username;
 
