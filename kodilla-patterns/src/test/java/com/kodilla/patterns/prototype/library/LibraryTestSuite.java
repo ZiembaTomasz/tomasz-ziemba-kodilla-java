@@ -34,7 +34,7 @@ public class LibraryTestSuite {
         Library deepClonedLibrary = null;
         try{
             deepClonedLibrary = library.deepCopy();
-            deepClonedLibrary.setName("Library number 3");
+            deepClonedLibrary.setName("Third Library");
         } catch(CloneNotSupportedException e) {
             System.out.println(e);
         }
@@ -45,9 +45,7 @@ public class LibraryTestSuite {
         Assert.assertEquals(2, library.getBooks().size());
         Assert.assertEquals(2, clonedLibrary.getBooks().size());
         Assert.assertEquals(3, deepClonedLibrary.getBooks().size());
-        Assert.assertEquals(clonedLibrary.getBooks().size(), library.getBooks().size());
-        Assert.assertEquals(deepClonedLibrary.getBooks().size(), library.getBooks().size());
-
-
+        Assert.assertEquals(clonedLibrary.getBooks(), library.getBooks());
+        Assert.assertNotEquals(deepClonedLibrary.getBooks(), library.getBooks());
     }
 }
