@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-09-07T16:15:16" hostname="DESKTOP-5T7H85E" time="0.005">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.005"/>
+  <system-out><![CDATA[Library{name='First Library', books=[Book{title='Grave', author='Nexxaramas', publicationDate=2007-03-11}, Book{title='Witcher', author='A. Sapkowski', publicationDate=2000-10-13}]}
+Library{name='Second Library', books=[Book{title='Grave', author='Nexxaramas', publicationDate=2007-03-11}, Book{title='Witcher', author='A. Sapkowski', publicationDate=2000-10-13}]}
+Library{name='Third Library', books=[Book{title='Grave', author='Nexxaramas', publicationDate=2007-03-11}, Book{title='Witcher', author='A. Sapkowski', publicationDate=2000-10-13}, Book{title='Harry Potter', author='J.K. Rowling', publicationDate=1988-06-15}]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
