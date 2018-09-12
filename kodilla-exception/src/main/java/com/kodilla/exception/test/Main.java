@@ -3,7 +3,7 @@ package com.kodilla.exception.test;
 public class Main {
 
     public static void main(String[] args) {
-        Flight flight = new Flight("London", "Madrid");
+        Flight flight = new Flight("London", "Moskwa");
         Logic logic = new Logic();
 
         try{
