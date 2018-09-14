@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class InvoiceDaoTesttSuite {
+public class InvoiceDaoTestSuite {
     @Autowired
     private InvoiceDao invoiceDao;
 
@@ -24,18 +24,19 @@ public class InvoiceDaoTesttSuite {
         Product product1 = new Product("VEHICLES");
         Item item = new Item(new BigDecimal(20),50,new BigDecimal(20));
         Item item1 = new Item(new BigDecimal(10), 20, new BigDecimal(10));
-        item.setProduct(product);
-        item1.setProduct(product1);
         Invoice invoice = new Invoice("50");
         invoice.getItems().add(item);
         invoice.getItems().add(item1);
 
+
         invoiceDao.save(invoice);
         int id = invoice.getId();
 
-        Assert.assertEquals(2, id);
+        Assert.assertEquals(1, id);
 
         invoiceDao.delete(id);
+
+
 
     }
 }
