@@ -18,12 +18,6 @@ public class InvoiceDaoTestSuite {
     @Autowired
     private InvoiceDao invoiceDao;
 
-    @Autowired
-    private ItemDao itemDao;
-
-    @Autowired
-    private ProductDao productDao;
-
     @Test
     public void testInvoiceDaoSave(){
         Product product = new Product("ELECTRONICS");
@@ -40,15 +34,9 @@ public class InvoiceDaoTestSuite {
         invoiceDao.save(invoice);
         int id = invoice.getId();
 
-
-
-
         Assert.assertNotEquals(0, id);
 
         invoiceDao.deleteAll();
-
-
-
 
     }
 }
