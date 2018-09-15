@@ -29,7 +29,7 @@ public final class Item {
         return id;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCT")
     public Product getProduct() {
         return product;
