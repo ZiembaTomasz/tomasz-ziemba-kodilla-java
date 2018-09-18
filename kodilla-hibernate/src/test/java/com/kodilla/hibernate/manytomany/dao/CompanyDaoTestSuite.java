@@ -87,7 +87,7 @@ public class CompanyDaoTestSuite {
 
         Company softwareMachine = new Company("Software Machine");
         Company dataMaesters = new Company("Data Maesters");
-        Company greyMatter = new Company("Grey Matter");
+        Company greyMatter = new Company("Grey Mattergit ");
 
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
