@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedQuery(
-        name = "Employee.findSmith",
+        name = "Employee.findLastname",
         query = "FROM Employee WHERE lastname = :WORKER"
 )
 

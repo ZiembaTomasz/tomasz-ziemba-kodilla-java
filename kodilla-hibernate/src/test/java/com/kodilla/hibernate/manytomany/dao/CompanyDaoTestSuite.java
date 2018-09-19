@@ -75,7 +75,7 @@ public class CompanyDaoTestSuite {
         employeeDao.save(stephanieClarckson);
         employeeDao.save(lindaKovalsky);
 
-        List<Employee>find = employeeDao.findSmith("Smith");
+        List<Employee>find = employeeDao.findLastname("Smith");
 
 
         Assert.assertEquals(1,find.size());
@@ -84,7 +84,6 @@ public class CompanyDaoTestSuite {
     }
     @Test
     public void testCompanies(){
-
         Company softwareMachine = new Company("Software Machine");
         Company dataMaesters = new Company("Data Maesters");
         Company greyMatter = new Company("Grey Mattergit ");
@@ -93,7 +92,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
 
-        List<Company>find = companyDao.findByName();
+        List<Company>find = companyDao.findByName("Gre%");
 
 
         Assert.assertEquals(1, find.size());
