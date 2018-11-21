@@ -9,6 +9,13 @@ import java.util.List;
         name = "Employee.findLastname",
         query = "FROM Employee WHERE lastname = :WORKER"
 )
+@NamedNativeQuery(
+        name = "Employee.findByPartialName",
+        query = "SELECT * FROM EMPLOYEES" +
+                " WHERE LASTNAME LIKE :PARAMETR",
+        resultClass = Employee.class
+)
+
 
 @Entity
 @Table(name = "EMPLOYEES")
@@ -45,9 +52,10 @@ public class Employee {
     public String getLastname() {
         return lastname;
     }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name =  "JOIN_COMPANY_EMPLOYEE",
+            name = "JOIN_COMPANY_EMPLOYEE",
             joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
             inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "COMPANY_ID")}
     )
