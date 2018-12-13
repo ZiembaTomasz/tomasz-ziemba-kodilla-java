@@ -28,7 +28,7 @@ public class StoredProcTestSuite {
         }
         assertEquals(0, howMany);
     }
-    @Test public void testUpdateBestsellers() throws SQLException{
+    /*@Test public void testUpdateBestsellers() throws SQLException{
         //Given
         DbManager dbManager = DbManager.getInstance();
         String sqlUpdate = "UPDATE BOOKS SET BESTSELLER= false ";
@@ -46,5 +46,5 @@ public class StoredProcTestSuite {
 
         }
         assertEquals(1, howMany);
-    }
+    }*/
 }

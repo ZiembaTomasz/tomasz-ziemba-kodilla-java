@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-09-09T15:33:14" hostname="DESKTOP-5T7H85E" time="0.019">
+<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-12-13T15:56:37" hostname="DESKTOP-5T7H85E" time="0.011">
   <properties/>
-  <testcase name="testListBooksWithConditionFragmentShorterThan3" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.015"/>
+  <testcase name="testListBooksWithConditionFragmentShorterThan3" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.007"/>
   <testcase name="testListBooksWithConditionMoreThan20" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.001"/>
   <testcase name="testListBooksWithConditionsReturnList" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.001"/>
   <testcase name="testListBooksBorrowedByUserConditionWhenNoBorrowed" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.002"/>

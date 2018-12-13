@@ -27,4 +27,12 @@ public final class SimpleProduct {
         return Double.compare(that.productPrice, productPrice) == 0 &&
                 Objects.equals(productName, that.productName);
     }
+
+    @Override
+    public String toString() {
+        return "SimpleProduct{" +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
+    }
 }
