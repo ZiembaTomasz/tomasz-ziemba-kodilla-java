@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing2.crudapp.ShapeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-10-30T12:11:22" hostname="DESKTOP-5T7H85E" time="0.001">
+  <properties/>
+  <testcase name="getFiguresTest" classname="com.kodilla.testing2.crudapp.ShapeTest" time="0.0"/>
+  <testcase name="addFiguresTest" classname="com.kodilla.testing2.crudapp.ShapeTest" time="0.001"/>
+  <testcase name="removeFigureTest" classname="com.kodilla.testing2.crudapp.ShapeTest" time="0.0"/>
+  <testcase name="showFiguresTest" classname="com.kodilla.testing2.crudapp.ShapeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -10,7 +10,7 @@ public class StreamMain {
         Forum forum = new Forum();
 
         Map<Integer, ForumUser> par = forum.getUserList().stream()
-                .filter(forumUser -> forumUser.getDateOfBirthday().getYear() < 1998)
+                .filter(forumUser -> forumUser.getDateOfBirthday().getYear() < 2001)
                 .filter(forumUser -> forumUser.getSex() == 'M')
                 .filter(forumUser -> forumUser.getPostCount() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
@@ -19,5 +19,7 @@ public class StreamMain {
         par.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
     }
 }

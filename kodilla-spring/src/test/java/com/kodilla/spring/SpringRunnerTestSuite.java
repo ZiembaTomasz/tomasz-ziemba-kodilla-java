@@ -26,7 +26,7 @@ public class SpringRunnerTestSuite {
         Assert.assertEquals("This is a circle.", name);
     }
 
-    @Test
+    /*@Test
     public void testTriangleLoadedIntoContainer() {
         //Given
         ApplicationContext context =
@@ -36,6 +36,6 @@ public class SpringRunnerTestSuite {
         String name = shape.getShapeName();
         //Then
         Assert.assertEquals("This is a triangle.", name);
-    }
+    }*/
 
 }

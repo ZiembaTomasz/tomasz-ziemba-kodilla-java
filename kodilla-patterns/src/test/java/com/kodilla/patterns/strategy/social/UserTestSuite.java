@@ -27,10 +27,10 @@ public class UserTestSuite {
 
         String georgeLike = george.sharePost();
         System.out.println("George shares on  " + georgeLike);
-        george.setSocialPublisher(new FacebookPublisher());
+        george.setSocialPublisher(new TwitterPublisher());
         georgeLike = george.sharePost();
         System.out.println("George shares on " + georgeLike);
 
-        Assert.assertEquals("Facebook!!!", georgeLike);
+        Assert.assertEquals("Twitter!!!", georgeLike);
     }
 }
