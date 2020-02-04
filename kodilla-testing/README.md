@@ -1,4 +1,4 @@
-#About
+# About
 
 * Getting to know the idea of ​​writing software tests
 * Getting to know the JUnit and Mockito libraries
