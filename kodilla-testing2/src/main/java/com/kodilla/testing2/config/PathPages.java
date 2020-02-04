@@ -9,7 +9,7 @@ public class PathPages {
         Browser.goTo(url);
     }
     public void goToJavaPath(){
-        Browser.driver.findElement(By.xpath())
+        Browser.driver.findElement(By.xpath());
 
     }
 }
